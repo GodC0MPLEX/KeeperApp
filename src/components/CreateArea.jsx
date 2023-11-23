@@ -14,6 +14,10 @@ function CreateArea(props) {
   function handleChange(event)
   {
     const{name,value}=event.target;
+    if(!value.trim()) {
+      alert("PLEASE INPUT ALL THE VALUES ")
+      return;
+    };
     setNote(preValue => {
       return {...preValue,[name]:value}
     })
